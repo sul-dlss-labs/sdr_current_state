@@ -69,7 +69,7 @@ Indexing
 
 ## General Timeframe
 
-This group wants to work relatively quickly to get through a "first pass" of understanding the current state of the SDR infrastructure that can then be used to help guide a number of other projects and efforts. We propose to get through a first pass of the outlined SDR ecosystem within 2 months, with a [(open to shifting) work plan outlined here](WORKPLAN.md).
+This group wants to work relatively quickly to get through a "first pass" of understanding the current state of the SDR infrastructure that can then be used to help guide a number of other projects and efforts. We propose to get through a first pass of the outlined SDR ecosystem within 2-3 months, with a [(open to shifting) work plan outlined here](WORKPLAN.md).
 
 ## Workspace, Meetings, & Communication
 
