@@ -22,7 +22,7 @@ The goal of this group is not to propose changes to SDR, but to just uncover, un
 
 ## Participants
 
-We need a core set of people at each meeting, then we want to request additional participants as we cover SDR infrastructure portions that relate to their expertise.
+We need a core set of people at each meeting, then we want to request additional participants as we cover SDR infrastructure portions that relate to their expertise (see the proposed [work plan](WORKPLAN.md) with sections and folks to bring in).
 
 We need to balance being able to move through the infrastructure understanding relatively quickly while not losing details needed to understand our current infrastructure.
 
@@ -31,41 +31,7 @@ Core Group:
 - Erin Fahy
 - Tony Zanella
 - Christina Harlow
-- ?
-
-Accessioning (outside of self-deposit interfaces & special pathways like WAS):
-- Ben Albritton
-- Peter?
-
-Argo:
-- John Martin
-- Lynn
-- Ben?
-
-Robots
-- Geo-darren
-- Peter?
-
-Pres-Core
-- Darren Weber
-- Lynn?
-- Ben?
-
-SURI
-- ?
-
-Hydrus & ETDs
-- Atz?
-
-WAS?
-- Naomi
-
-Dor Services & PURL
-- ?
-
-Indexing
-- Jesse &/or Jack
--
+- Ben? Lynn? Infrastructure team??
 
 ## General Timeframe
 
