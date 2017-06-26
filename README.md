@@ -2,7 +2,7 @@
 
 ## Scope
 
-This is a working group to explore, explain, document, and improve shared understanding of the current state of SDR (SDR2). It aims to generate documentation that explains for end-to-end workflows for SDR resources, and then expand out from that to understand the implicated:
+This is a working group to explore, explain, document, and improve shared understanding of the current state of the SDR (SDR2) ecosystem. It aims to generate documentation that explains for end-to-end workflows for DOR / SDR resources, and then expand out from that to understand the implicated:
 - codebases & applications
 - application interfaces
 - data stores
@@ -12,9 +12,13 @@ This is a working group to explore, explain, document, and improve shared unders
 - analytics (monitoring, testing, etc.)
 - etc.
 
-The goal of this group is not to propose changes to SDR, but to just uncover, understand, and document what currently exists for the sake of common understanding across units and projects. The proposed artifact(s) would be documentation, diagrams, and meeting(s) with units in DLSS to review and disseminate the findings.
+The goal of this group is not to propose changes to SDR and SDR-adjacent applications, but to just uncover, understand, and document what currently exists for the sake of common understanding across units and projects. The proposed artifact(s) would be documentation, diagrams, and meeting(s) with units in DLSS to review and disseminate the findings.
 
 ## Definitions
+
+`SDR ecosystem` here is used to represent anything that is adjacent to or interacts with the DOR Fedora 3 instance and the Preservation Core file system.
+
+We're looking at `end-to-end workflows` through this ecosystem, which means where someone with a digital resources starts to ingest their resource to being able to view, access, find that resource in one of our discovery layers.
 
 ## Conveners:
 
