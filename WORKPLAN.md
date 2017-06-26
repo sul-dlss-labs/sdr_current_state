@@ -13,42 +13,42 @@ Work through the following groupings with these questions in mind:
 - enumerate the interfaces and connecting processes
 
 1. Object Current State stats: Christina, Tony
-    a. DOR Fedora 3
-    b. Pres-Core filesystem
-    c. Argo Index
-    d. SURI identifiers numbers
-    e. PURL-fetcher output
+    * DOR Fedora 3
+    * Pres-Core filesystem
+    * Argo Index
+    * SURI identifiers numbers
+    * PURL-fetcher output
 2. Ingest / Entry Points: Ben, Peter, Atz, Naomi
-    a. Hydrus &/or ETDs
-    b. Pre-assembly (what uses pre-assembly scripts?)
-    c. WAS (was-registrar)
-    d. Staging file systems?
+    * Hydrus &/or ETDs
+    * Pre-assembly (what uses pre-assembly scripts?)
+    * WAS (was-registrar)
+    * Staging file systems?
 3. DOR Assembly & Accessioning: Chris,
-    a. DOR Services (Gem)
-    b. DOR Services (App)
-    c. SURI
-    d. DOR Workflow Service (Ruby interface to Java)
-    e. Workflow Service (Java)
+    * DOR Services (Gem)
+    * DOR Services (App)
+    * SURI
+    * DOR Workflow Service (Ruby interface to Java)
+    * Workflow Service (Java)
 4. Robots: Darren H., Chris, Ben?
-    a. Robots Master, Lyber Core, Robot Controller
-    b. Assembly & Common Accessioning
-    d. Other Robot Suites
+    * Robots Master, Lyber Core, Robot Controller
+    * Assembly & Common Accessioning
+    * Other Robot Suites
 5. DOR Object Persistence & Publishing: John M., Tommy, Jack?
-    a. Argo
-    b. Fedora 3
-    c. PURL / PURL-fetcher
+    * Argo
+    * Fedora 3
+    * PURL / PURL-fetcher
 6. Preservation Core: Darren W., Ben?
-    a. MOAB (Gem)
-    b. SDR-Preservation Core
-    c. Archive-Catalog
-    d. SDR-PC File System written to Tape
+    * MOAB (Gem)
+    * SDR-Preservation Core
+    * Archive-Catalog
+    * SDR-PC File System written to Tape
 7. Indexing, Access & Discovery: Jack, Jesse, Chris
-    a. Discovery Dispatcher
-    b. sw-indexer
-    c. sul-embed
-    d. SearchWorks
-    e. SWAP
-    f. Spotlight
+    * Discovery Dispatcher
+    * sw-indexer
+    * sul-embed
+    * SearchWorks
+    * SWAP
+    * Spotlight
 8. Wrap-up / Overview of State
 
 ## SDR Ecosystem Overview Groupings
