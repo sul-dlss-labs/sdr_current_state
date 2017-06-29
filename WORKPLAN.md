@@ -18,7 +18,7 @@ Work through the following groupings with these questions in mind:
     * Argo Index
     * SURI identifiers numbers
     * PURL-fetcher output
-2. Ingest / Entry Points: Ben, Peter, Laura for first two; 
+2. Ingest / Entry Points: Ben, Peter, Laura for first two; Tony Calvano
     * Pre-assembly (what uses pre-assembly scripts?)
     * Staging file systems?
     * (separate group) Hydrus &/or ETDs: Cathy, Justin?
