@@ -23,32 +23,38 @@ Work through the following groupings with these questions in mind:
     * Staging file systems?
     * (separate group) Hydrus &/or ETDs: Cathy, Justin?
     * WAS (was-registrar)
-3. DOR Services: 
+3. DOR Services: Peter, Joe possibly for workflows
     * DOR Services (Gem)
     * DOR Services (App)
     * SURI
     * DOR Workflow Service (Ruby interface to Java)
     * Workflow Service (Java)
     * Fedora 3
-4. Robots: Darren H., Chris, Ben?
+4. Robots: Darren H., Ben?, Peter?
     * Robots Master, Lyber Core, Robot Controller
     * Assembly & Common Accessioning
     * Other Robot Suites
-5. ...: John M., Tommy, Jack?
+5. Argo+: John M., Tommy, Darren H.?, Peter?, Ben
     * Argo
     * dor_indexing_app
-    * PURL / PURL-fetcher
-6. Preservation Core: Darren W., Ben?
+    * sul-mq
+    * modsulator
+    * (Fedora 3, Solr+)
+6. Preservation Core: Darren W., Ben?, Cam, John M. 
     * MOAB (Gem)
     * SDR-Preservation Core
-    * Archive-Catalog
+    * SDR-Services-App
+    * Archive-Catalog (?)
     * SDR-PC File System written to Tape
-7. Indexing, Access & Discovery: Jack, Jesse, Chris
+7. PURL+: Tommy, John M., Naomi
+    * PURL / PURL-fetcher
+    * Stacks
+    * Wowza
+7. Indexing, Access & Discovery: Jack, Jesse
     * Discovery Dispatcher
     * sw-indexer
     * sul-embed
     * SearchWorks
-    * SWAP
     * Spotlight
 8. Wrap-up / Overview of State
 
