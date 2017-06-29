@@ -18,24 +18,25 @@ Work through the following groupings with these questions in mind:
     * Argo Index
     * SURI identifiers numbers
     * PURL-fetcher output
-2. Ingest / Entry Points: Ben, Peter, Atz, Naomi
-    * Hydrus &/or ETDs
+2. Ingest / Entry Points: Ben, Peter, Laura for first two; 
     * Pre-assembly (what uses pre-assembly scripts?)
-    * WAS (was-registrar)
     * Staging file systems?
-3. DOR Assembly & Accessioning: Chris,
+    * (separate group) Hydrus &/or ETDs: Cathy, Justin?
+    * WAS (was-registrar)
+3. DOR Services: 
     * DOR Services (Gem)
     * DOR Services (App)
     * SURI
     * DOR Workflow Service (Ruby interface to Java)
     * Workflow Service (Java)
+    * Fedora 3
 4. Robots: Darren H., Chris, Ben?
     * Robots Master, Lyber Core, Robot Controller
     * Assembly & Common Accessioning
     * Other Robot Suites
-5. DOR Object Persistence & Publishing: John M., Tommy, Jack?
+5. ...: John M., Tommy, Jack?
     * Argo
-    * Fedora 3
+    * dor_indexing_app
     * PURL / PURL-fetcher
 6. Preservation Core: Darren W., Ben?
     * MOAB (Gem)
