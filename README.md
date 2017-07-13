@@ -12,7 +12,7 @@ This is a working group to explore, explain, document, and improve shared unders
 - analytics (monitoring, testing, etc.)
 - etc.
 
-The goal of this group is not to propose changes to SDR and SDR-adjacent applications, but to just uncover, understand, and document what currently exists for the sake of common understanding across units and projects. The proposed artifact(s) would be documentation, diagrams, and meeting(s) with units in DLSS to review and disseminate the findings.
+The goal of this group is not to propose changes to SDR and SDR-adjacent applications or architecture, but to just uncover, understand, and document what currently exists "on the ground" for the sake of common understanding across units and projects. The proposed artifact(s) would be documentation, diagrams, and meeting(s) with units in DLSS to review and disseminate the findings.
 
 ## Definitions
 
@@ -22,20 +22,13 @@ We're looking at `end-to-end workflows` through this ecosystem, which means wher
 
 ## Conveners:
 
-* Christina, Chris, Erin?
+* Christina, Chris, Erin
 
 ## Participants
 
 We need a core set of people at each meeting, then we want to request additional participants as we cover SDR infrastructure portions that relate to their expertise (see the proposed [work plan](WORKPLAN.md) with sections and folks to bring in).
 
 We need to balance being able to move through the infrastructure understanding relatively quickly while not losing details needed to understand our current infrastructure.
-
-Core Group:
-- Chris Beer
-- Erin Fahy
-- Tony Zanella
-- Christina Harlow
-- Ben? Lynn? Infrastructure team??
 
 ## General Timeframe
 
@@ -45,11 +38,10 @@ This group wants to work relatively quickly to get through a "first pass" of und
 
 ### Primary Workspace (Notes, Outputs):
 
-- This GitHub repository. We'll keep docs, diagrams, other artifacts in the repository until we're finished (then they'll be migrated somewhere better), and meeting notes / calendar / etc. in the GitHub wiki.
+- This GitHub repository. We'll keep docs, diagrams, other artifacts in the repository until we're finished (then they'll be migrated somewhere better, probably Consul), and meeting notes / calendar / etc. in the GitHub wiki.
 
 ### Communication:
 
 - [Weekly, 1 Hour Meetings per this schedule](WORKPLAN.md)
 - Github Issues on this repository for work-specific discussions or questions
 - Github Projects on this repository for work management
-- SUL-DLSS Slack channel?
