@@ -30,7 +30,7 @@ Work through the following groupings with these questions in mind:
     * DOR Workflow Service (Ruby interface to Java)
     * Workflow Service (Java)
     * Fedora 3
-4. Robots: Darren H., Ben?, Peter?
+4. Robots: Darren H., Ben, Peter
     * Robots Master, Lyber Core, Robot Controller
     * Assembly & Common Accessioning
     * Other Robot Suites
@@ -40,7 +40,7 @@ Work through the following groupings with these questions in mind:
     * sul-mq
     * modsulator
     * (Fedora 3, Solr+)
-6. Preservation Core: Darren W., Ben?, Cam, John M. 
+6. Preservation Core: Darren W., Ben?, Cam, John M.
     * MOAB (Gem)
     * SDR-Preservation Core
     * SDR-Services-App
