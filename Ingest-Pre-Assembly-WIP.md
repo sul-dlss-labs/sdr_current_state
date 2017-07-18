@@ -129,10 +129,10 @@
           report: '/some/full/path/to/validation_warnings.csv'
     ```
   - [CSV Manifest (OPTIONAL, location given in YAML)](https://raw.githubusercontent.com/sul-dlss/pre-assembly/master/config/projects/manifest_template/TEMPLATE_manifest.csv)
-  ```CSV
+    ```CSV
      format,sourceid,filename,label,year,inst_notes,prod_notes,has_more_metadata,description
      "BW film","foo-2.2","image3.tif","Avus 1938, 1956","1938, 1956","strip 2 is duplicate; don't scan","","","this is a description"
-  ```
+    ```
   - [Descriptive Metadata template (OPTIONAL, location given in YAML)](https://github.com/sul-dlss/pre-assembly/blob/master/config/projects/manifest_template/TEMPLATE_mods.xml)
   ```XML
   <?xml version="1.0"?>
