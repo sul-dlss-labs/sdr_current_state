@@ -127,7 +127,7 @@
         validate_bundle_dir:
           code:   '/some/full/path/to/validation_code.rb'
           report: '/some/full/path/to/validation_warnings.csv'
-  ```
+    ```
   - [CSV Manifest (OPTIONAL, location given in YAML)](https://raw.githubusercontent.com/sul-dlss/pre-assembly/master/config/projects/manifest_template/TEMPLATE_manifest.csv)
   ```CSV
      format,sourceid,filename,label,year,inst_notes,prod_notes,has_more_metadata,description
