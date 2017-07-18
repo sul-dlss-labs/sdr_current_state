@@ -130,63 +130,63 @@
     ```
   - [CSV Manifest (OPTIONAL, location given in YAML)](https://raw.githubusercontent.com/sul-dlss/pre-assembly/master/config/projects/manifest_template/TEMPLATE_manifest.csv)
     ```CSV
-     format,sourceid,filename,label,year,inst_notes,prod_notes,has_more_metadata,description
-     "BW film","foo-2.2","image3.tif","Avus 1938, 1956","1938, 1956","strip 2 is duplicate; don't scan","","","this is a description"
+       format,sourceid,filename,label,year,inst_notes,prod_notes,has_more_metadata,description
+       "BW film","foo-2.2","image3.tif","Avus 1938, 1956","1938, 1956","strip 2 is duplicate; don't scan","","","this is a description"
     ```
   - [Descriptive Metadata template (OPTIONAL, location given in YAML)](https://github.com/sul-dlss/pre-assembly/blob/master/config/projects/manifest_template/TEMPLATE_mods.xml)
-  ```XML
-  <?xml version="1.0"?>
-  <mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
-    <typeOfResource>still image</typeOfResource>
-    <genre authority="att">digital image</genre>
-    <subject authority="lcsh">
-      <topic>Collection/Project Subject Heading 1</topic>
-      <topic>Collection/Project Subject Heading 2</topic>
-    </subject>
-    <relatedItem type="host">
+    ```XML
+    <?xml version="1.0"?>
+    <mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+      <typeOfResource>still image</typeOfResource>
+      <genre authority="att">digital image</genre>
+      <subject authority="lcsh">
+        <topic>Collection/Project Subject Heading 1</topic>
+        <topic>Collection/Project Subject Heading 2</topic>
+      </subject>
+      <relatedItem type="host">
+        <titleInfo>
+          <title>Collection / Project Title</title>
+        </titleInfo>
+        <typeOfResource collection="yes"/>
+      </relatedItem>
+      <relatedItem type="original">
+        <physicalDescription>
+          <form authority="att">[[format]]</form>
+        </physicalDescription>
+      </relatedItem>
+      <originInfo>
+        <dateCreated>[[year]]</dateCreated>
+      </originInfo>
       <titleInfo>
-        <title>Collection / Project Title</title>
+        <% if manifest_row[:label] %>
+    	    <title>[[label]]</title>
+		    <% end %>
       </titleInfo>
-      <typeOfResource collection="yes"/>
-    </relatedItem>
-    <relatedItem type="original">
-      <physicalDescription>
-        <form authority="att">[[format]]</form>
-      </physicalDescription>
-    </relatedItem>
-    <originInfo>
-      <dateCreated>[[year]]</dateCreated>
-    </originInfo>
-    <titleInfo>
-      <% if manifest_row[:label] %>
-    	  <title>[[label]]</title>
-		  <% end %>
-    </titleInfo>
-    <% if manifest_row[:description] %>
-      <note>
-        <%=manifest_row[:description]%>
-      </note>
-    <% end %>
-    <identifier type="local" displayLabel="Revs ID">
-      [[sourceid]]
-    </identifier>
-    <% if manifest_row[:inst_notes] %>
-      <note type="source note" ID="inst_notes">
-        <%=manifest_row[:inst_notes]%>
-      </note>
-    <% end %>
-    <% if manifest_row[:prod_notes] %>
-      <note type="source note" ID="prod_notes">
-        <%=manifest_row[:prod_notes]%>
-      </note>
-    <% end %>
-    <% if manifest_row[:has_more_metadata] %>
-      <note type="source note" ID="has_more_metadata">
-        <%=manifest_row[:has_more_metadata]%>
-      </note>
-    <% end %>
-  </mods>
-  ```
+      <% if manifest_row[:description] %>
+        <note>
+          <%=manifest_row[:description]%>
+        </note>
+      <% end %>
+      <identifier type="local" displayLabel="Revs ID">
+        [[sourceid]]
+      </identifier>
+      <% if manifest_row[:inst_notes] %>
+        <note type="source note" ID="inst_notes">
+          <%=manifest_row[:inst_notes]%>
+        </note>
+      <% end %>
+      <% if manifest_row[:prod_notes] %>
+        <note type="source note" ID="prod_notes">
+          <%=manifest_row[:prod_notes]%>
+        </note>
+      <% end %>
+      <% if manifest_row[:has_more_metadata] %>
+        <note type="source note" ID="has_more_metadata">
+          <%=manifest_row[:has_more_metadata]%>
+        </note>
+      <% end %>
+    </mods>
+    ```
 
 - Materials location + access (required)
 - If objects are registered:
