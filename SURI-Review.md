@@ -66,7 +66,7 @@ URI                                        | POST                  | GET        
 ## SURI Endpoints Testing
 
 - Last Tested: 2017-07-19
-- User(s): `labware` & `dor` (should both have full admin privileges)
+- User(s): `labware` (mint IDs only) & `dor` (full admin privileges)
 
 ### SURI-Test
 
