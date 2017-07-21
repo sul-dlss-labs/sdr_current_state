@@ -14,12 +14,18 @@
 - Monitoring: [Honeybadger (Not currently monitoring anything)](https://app.honeybadger.io/projects/52900/faults?q=-is%3Aresolved+-is%3Aignored)
 - Docs: [Consul Space (Mostly Up-To-Date)](https://consul.stanford.edu/display/chimera/Automated+Accessioning+and+Object+Remediation+%28pre-assembly+and+assembly%29)
 - Dependencies:
-  - Fedora 3 (DOR Fedora)
-  - SUL Solr argo_prod3 Index
-  - DOR-Services-App
-    - /objects/{druid}/apo_workflows/assemblyWF
-    - /suri2/namespaces/druid
+  - `Fedora 3 (DOR Fedora) via ActiveFedora/Dor-Services (gem)`
+  - `SUL Solr argo_prod3 Index`
+  - `DOR-Services-App`
+    - `/objects/{druid}/apo_workflows/assemblyWF`
+    - `/suri2/namespaces/druid`
   - Check local gems needed in Gemfile.lock
+
+## Interfaces & Data Shapes
+
+To be made into tests, profiling, or monitoring concerns.
+
+TBD
 
 ## Workflows, Interfaces & Data Shapes
 
@@ -318,3 +324,8 @@ User on sul-lyberservices-[test|prod] & in `/home/lyberadmin/pre-assembly/curren
          - Returns to stdout any errors
    - Profiling saved to memory_report.txt
    - Array of processed PIDs returned to STDOUT
+
+
+### Worklow: Remediation Framework
+
+TBD
