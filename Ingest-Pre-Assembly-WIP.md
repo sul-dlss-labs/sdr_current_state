@@ -12,13 +12,20 @@
   - project-specific: some in `/dor/preassembly`; others in project specific directories;
   - code-specific: `current/log/`
 - Monitoring: [Honeybadger (Not currently monitoring anything)](https://app.honeybadger.io/projects/52900/faults?q=-is%3Aresolved+-is%3Aignored)
-- Docs: Consul Space (Mostly Up-To-Date)
+- Docs: [Consul Space (Mostly Up-To-Date)](https://consul.stanford.edu/display/chimera/Automated+Accessioning+and+Object+Remediation+%28pre-assembly+and+assembly%29)
+- Dependencies:
+  - Fedora 3 (DOR Fedora)
+  - SUL Solr argo_prod3 Index
+  - DOR-Services-App
+    - /objects/{druid}/apo_workflows/assemblyWF
+    - /suri2/namespaces/druid
+  - Check local gems needed in Gemfile.lock
 
-## Interfaces & Data Shapes
+## Workflows, Interfaces & Data Shapes
 
-### Preparatory
+### Required Data Preparation
 
-- User creates in workspace for each Collection or Project:
+User creates the following in workspace for each Collection or Project:
   - [Configuration YAML file (REQUIRED)](https://github.com/sul-dlss/pre-assembly/blob/master/config/projects/TEMPLATE.yaml)
     ```YAML
         project_name:      'Foo'                   # Required. Used as prefix to sourceID and as project tag if registering objects.
@@ -160,7 +167,7 @@
       <titleInfo>
         <% if manifest_row[:label] %>
     	    <title>[[label]]</title>
-		    <% end %>
+      <% end %>
       </titleInfo>
       <% if manifest_row[:description] %>
         <note>
@@ -188,11 +195,126 @@
     </mods>
     ```
 
-- Materials location + access (required)
-- If objects are registered:
-    - If not, Manifest as CSV with sourceid, filename, label is required
-    - If using Manifest, MODS XML template (optional)
-- Descriptive metadata location + access (optional)
-- Materials Folder structure  - keep or don’t
-- Project's APO DRUID (required)
-- Associated Dor Set Object’s APO DRUID (optional)
+### Worklow: Discovery Report
+User on sul-lyberservices-[test|prod] & in `pre-assembly/current` runs `bin/discovery_report [confirm_checksums|check_sourceids|no_check_reg|show_staged|show_smpl_cm]`:
+   - `Pre-Assembly::Bundle` Object instantiated with @params == YAML file read into memory
+     - Reads `AssemblyUtils::Assembly` @Assembly_Workspace
+   - `PreAssembly::Reporting.discovery_report(@params)`
+     - Checks @apo_druid_id from params with `Assembly::Utils.is_apo?()`
+     - Calls `Dor::Item.find(druid)` for @apo_druid_id
+     - Calls `ActiveFedora.find(id)` for @apo_druid_id
+     - **Queries Fedora**, returns AF Object
+     - Checks `obj.identityMetadata.objectType.first == 'adminPolicy'` for the AF Object
+     - Calls `PreAssembly::Bundle.discover_objects`
+       - `PreAssembly::DigitalObject` Object instantiated
+       - Digital Object data attributes added:
+         ```
+         @pid = ''
+         @druid = nil
+         @dor_object = nil
+         @reg_by_pre_assembly = false
+         @label = Dor::Config.dor.default_label
+         @source_id = nil
+         @manifest_row = nil
+         @content_md_file = contentMetadata.xml (at root of object directory)
+         @technical_md_file = descMetadata.xml (at root of object directory)
+         @desc_md_file = technicalMetadata.xml (at root of object directory)
+         @content_md_xml = ''
+         @technical_md_xml = ''
+         @desc_md_xml = ''
+         @pre_assem_finished = false
+         @content_structure  = @project_style
+         ```
+    - For each digital object in the generated array of objects:
+      - Passes @barcode to `PreAssembly::DigitalObject.get_pid_from_container_barcode()`
+        - Passes barcode to `Dor::SearchService.query_by_id`
+        - Queries **SUL Solr argo_prod3 Index**, returns DRUIDs for Objects
+      - Passes returned pids to `PreAssembly::DigitalObject.get_dor_item_apos(pid)`
+        - Passes each pid to `Dor::Item.find(pid)`
+        - **Queries Fedora**, returns AF Object
+      - Then passes @source_id for checking to `Assembly::Utils.get_druids_by_sourceid(source_ids)`
+        - Passes barcode to `Dor::SearchService.query_by_id`
+        - Queries **SUL Solr argo_prod3 Index**, returns DRUIDs for Objects
+        - Checks the response size == 0
+  - `PreAssembly::Reporting.discovery_report(params)` completes with report out to STDOUT
+    - See data output for the report here: https://github.com/sul-dlss/pre-assembly/blob/b46edb09f3ed45df54e5685cd8230d8104d504dd/lib/pre_assembly/reporting.rb#L192
+
+### Worklow: Discovery Report
+User on sul-lyberservices-[test|prod] & in `/home/lyberadmin/pre-assembly/current` runs `OBOT_ENVIRONMENT=env nohup bin/pre-assemble OPTS YAML_FILE`:
+   - params = YAML file, then add
+     - params['resume'] = true if options[resume]
+     - params['limit_n'] = options[limit].to_i if options[limit]
+     - params['config_filename'] = YAML_FILE
+   - `Pre-Assembly::Bundle` Object instantiated with @params
+     - Reads `AssemblyUtils::Assembly` @Assembly_Workspace
+   - `PreAssembly::Bundle.run_pre_assembly()`
+     - Does special work if SMPL Object / Manifest
+     - Calls `PreAssembly::Bundle.discover_objects`
+       - `PreAssembly::DigitalObject` Object instantiated
+       - Digital Object data attributes added:
+         ```
+         @pid = ''
+         @druid = nil
+         @dor_object = nil
+         @reg_by_pre_assembly = false
+         @label = Dor::Config.dor.default_label
+         @source_id = nil
+         @manifest_row = nil
+         @content_md_file = contentMetadata.xml (at root of object directory)
+         @technical_md_file = descMetadata.xml (at root of object directory)
+         @desc_md_file = technicalMetadata.xml (at root of object directory)
+         @content_md_xml = ''
+         @technical_md_xml = ''
+         @desc_md_xml = ''
+         @pre_assem_finished = false
+         @content_structure  = @project_style
+         ```
+    - For each digital object in the generated array of objects:
+       - Reads the checksums stored with the Objects
+       - Adds fields from the provided Manifest
+       - Calls `PreAssembly::Bundle.process_digital_objects`
+         - `desc_md_template_xml` passed to `PreAssembly::DigitalObject.pre_assemble(desc_md_xml)`
+           - Calls `PreAssembly::DigitalObject.determine_druid()`, depending on @params['project_style']['get_druid_form']:
+             - `get_pid_from_manifest`
+               - Retrieves `manifest_row[druid]` from provided Manifest
+             - `get_pid_from_suri`
+               - Calls `Dor::SuriService.mint_id`
+               - Issues POST Request to **DOR-Services-App /suri2/namespaces/druid**
+             - `get_pid_from_druid_minter`
+               - Calls `PreAssembly::DruidMinter.next()` for testing only
+             - `get_pid_from_container`
+               - Retrieves data from params['container_basename']
+             - `get_pid_from_container_barcode`
+               - Passes @barcode to `PreAssembly::DigitalObject.get_pid_from_container_barcode()`
+                 - Passes barcode to `Dor::SearchService.query_by_id`
+                 - Queries **SUL Solr argo_prod3 Index**, returns DRUIDs for Objects
+             - Returns a DRUID
+           - Calls `PreAssembly::DigitalObject.prepare_for_reaccession`
+             - Passes `druid,[:stacks,:stage,:symlinks]` to `AssemblyUtils.cleanup_object`
+             - Cleans up Pre-assembly Staging
+           - Passes `registration_params` to `PreAssembly::DigitalObject.register_in_dor(params)`
+             - Passes `registration_params` to `Dor::RegistrationService.register_object params`
+             - Calls `Dor::RegistrationService.register_object()`
+             - **Updates Fedora** and returns AF Object
+             - If there is an error with the Fedora call, check that something doesn't already exist:
+               - Passes `source_id` to `Dor::SearchService.query_by_id`
+                 - **Queries SUL Solr argo_prod3 Index**
+               - Passes `pid` to `Dor::SearchService.delete_by_id(pid)` to delete the PID created if already existed
+               - Calls `Dor::SearchService.solr.commit`
+                 - **Updates SUL Solr argo_prod3 Index**
+           - Calls `PreAssembly::DigitalObject.add_object_to_set()`
+             - Adds `[:is_member_of, "info:fedora/#{setID}"]`, `[:is_member_of_collection, "info:fedora/#{setID}"]` to Object
+             - Calls Object.save (**Fedora via ActiveFedora via Dor::Item?**)
+           - Calls `PreAssembly::DigitalObject.stage_files()`
+           - Calls `PreAssembly::DigitalObject.generate_content_metadata()`
+             - Calls `Assembly::ContentMetadata.create_content_metadata`
+           - Calls `PreAssembly::DigitalObject.generate_technical_metadata()`
+           - Calls `PreAssembly::DigitalObject.generate_desc_metadata()`
+           - Calls `PreAssembly::DigitalObject.initialize_assembly_workflow()`
+             - POST request with no content, auth header to **DOR-Services-App /objects/{druid}/apo_workflows/assemblyWF**
+             - Checks status_code response for success
+       - Calls `PreAssembly::Bundle.delete_digital_objects`
+         - Deletes digital objects if development environment
+         - Returns to stdout any errors
+   - Profiling saved to memory_report.txt
+   - Array of processed PIDs returned to STDOUT
