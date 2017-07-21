@@ -1,6 +1,17 @@
 # Ingest: Pre-Assembly
 
+### TOC
+
+* [Codebase Details](#details)
+* [Interfaces & Data Shapes](#interfaces--data-shapes)
+* [Workflows](#workflows-interfaces--data-shapes)
+  * [Required Data Preparation](#required-data-preparation)
+  * [Workflow: Discovery Report](#worklow-discovery-report)
+  * [Workflow: Pre-Assembly](#worklow-pre-assembly)
+  * [Workflow: Remediation Framework](#worklow-remediation-framework)
+
 ![overview diagram](https://docs.google.com/drawings/d/e/2PACX-1vR8X5NbWjdxiw7K5OKEGlj0t4TrK5_IxcU-2LzDMf3Ph5wpS2FFQf68rBf5xqHezLqPxjuo4JcQNoR3/pub?w=2271&h=1494)
+[Link to diagram in Google Drawings](https://docs.google.com/drawings/d/11snoNlCLLUEjI1onYC0TqlY-2PqeJhp7QuqBeJK1KIQ/edit?usp=sharing)
 
 ## Details
 
@@ -245,7 +256,7 @@ User on sul-lyberservices-[test|prod] & in `pre-assembly/current` runs `bin/disc
   - `PreAssembly::Reporting.discovery_report(params)` completes with report out to STDOUT
     - See data output for the report here: https://github.com/sul-dlss/pre-assembly/blob/b46edb09f3ed45df54e5685cd8230d8104d504dd/lib/pre_assembly/reporting.rb#L192
 
-### Worklow: Discovery Report
+### Worklow: Pre-Assembly
 User on sul-lyberservices-[test|prod] & in `/home/lyberadmin/pre-assembly/current` runs `OBOT_ENVIRONMENT=env nohup bin/pre-assemble OPTS YAML_FILE`:
    - params = YAML file, then add
      - params['resume'] = true if options[resume]
