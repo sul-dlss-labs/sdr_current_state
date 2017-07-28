@@ -2,16 +2,21 @@
 
 ## SURI Overview
 
-- codebase: https://github.com/sul-dlss/suri2/
-- machine: `sul-lyberservices-[test|dev|prod].stanford.edu` (I think `lyberteam` can access these currently)
-- state of test / dev / prod machines: uncertain if deployed codebases are same
-- Oracle database location: `suldbdev2`, `suldbtest2`, `suldbprod2`
-- SURI specification (appears mostly up to date): https://consul.stanford.edu/display/chimera/SURI+2.0+Specification
-- SURI endpoints of interest for SDR3 / Hydrox:
+- **Codebase**: https://github.com/sul-dlss/suri2/
+- **Machine**: `sul-lyberservices-[test|dev|prod].stanford.edu`
+- **Locations**: `/home/lyberadmin/apps/suri2` ; `/usr/share/tomcat6/webapps/suri2`
+- **State of test / dev / prod machines**: uncertain if deployed codebases are same
+- **Oracle databases**: `suldbdev2`, `suldbtest2`, `suldbprod2`
+- **Service URL**: http://sul-lyberservices-[test|dev|prod].stanford.edu/suri2/
+- **Logs**: /usr/share/tomcat6/webapps/suri2/WEB-INF/suri2.log
+- **Monitoring**: None? Nagios?
+- **SURI specification (appears mostly up to date)**: https://consul.stanford.edu/display/chimera/SURI+2.0+Specification
+- **SURI endpoints of interest for SDR**:
     - druid namespace: https://sul-lyberservices-prod.stanford.edu/suri2/namespaces/druid
-    - mint a DRUID: post to https://sul-lyberservices-prod.stanford.edu/suri2/namespaces/druid/identifiers?quantity=1 with authentication (check dor-services shared configs for some auths)
-    - GET request to https://sul-lyberservices-prod.stanford.edu/suri2/namespaces/druid/identifiers should get a list of all identifiers
-- SURI is called I think by Hydrus via dor-services (gem), ETDs (directly? uncertain), and dor-services-app.
+    - mint a DRUID: HTTP/POST to https://sul-lyberservices-prod.stanford.edu/suri2/namespaces/druid/identifiers?quantity=1 with authentication (check `dor-services` shared configs)
+    - HTTP/GET request to https://sul-lyberservices-prod.stanford.edu/suri2/namespaces/druid/identifiers should return all DRUIDs
+- **Dependencies**: Nothing external
+- **Who calls SURI (directly)**: Nagios, ETDs, Hydrus, Dor-Services-App.
 
 ## SURI Calls
 
