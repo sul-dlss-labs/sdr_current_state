@@ -12,44 +12,57 @@ Work through the following groupings with these questions in mind:
 - what logging, profiling, or object QA validation checks exist for this segment of the process?
 - enumerate the interfaces and connecting processes
 
+2. ~Ingest / Entry Points~
+    * [Pre-assembly (what uses pre-assembly scripts)](Ingest-Pre-Assembly.md)
+    * [Hydrus](Ingest-Hydrus.md)
+    * [ETDs](Ingest-ETDs.md)
+    * [WAS (was-registrar)](Ingest-WAS.md)
+    * Staging file systems
+3. ~DOR Services~
+    * [DOR Services (Gem)](Dor-Services-Gem.md)
+    * [DOR Services (App)](Dor-Services-App.md)
+    * [SURI](SURI.md)
+    * [DOR Workflow Service (Ruby interface to Java)](Dor-Workflow-Service.md)
+    * [Workflow Service (Java)](Workflow-Service.md)
+    * Fedora 3
+4. Robots
+    * [Robots Master, Lyber Core, Robot Controller](Robots.md)
+    * [Assembly](Robots-Assembly.md)
+    * [Common Accessioning](Robots-Common-Accessioning.md)
+    * [Other Robot Suites](Robot-Suites.md)
+      * Item Release
+      * ETD Robots
+      * Gis robot suite
+      * Goobi Robot
+      * Dor gsb robots
+      * Sdr Pres Core Robots
+      * WAS Robot Suite
+      * WAS Metadata Extractor
+    * [Workflows Details](Robots-Workflows-Details.md)
+7. PURL+: Tommy, John M., Naomi
+    * [PURL](PURL.md)
+    * [PURL-fetcher](PURL-fetcher.md)
+    * [Stacks](PURL-Stacks.md)
+    * [Wowza](Wowza.md)
+5. Argo+: John M., Tommy, Darren H., Peter?, Ben
+    * [Argo](Argo.md)
+    * [SUL MQ (Messaging)](SUL-MQ.md)
+    * [Dor Indexing App](Dor-Indexing-App.md)
+    * [Dor Camel Routes](Dor-Camel-Routes.md)
+    * [Modsulator](Modsulator.md)
+    * [Modsulator Rails App](Modsulator-Rails-App.md)
 1. Object Current State stats: Christina, Tony
     * DOR Fedora 3
     * Pres-Core filesystem
     * Argo Index
     * SURI identifiers numbers
     * PURL-fetcher output
-2. Ingest / Entry Points: Ben, Peter, Laura for first two; Tony Calvano
-    * Pre-assembly (what uses pre-assembly scripts?)
-    * Staging file systems?
-    * (separate group) Hydrus &/or ETDs: Cathy, Justin?
-    * WAS (was-registrar)
-3. DOR Services: Peter, Joe possibly for workflows
-    * DOR Services (Gem)
-    * DOR Services (App)
-    * SURI
-    * DOR Workflow Service (Ruby interface to Java)
-    * Workflow Service (Java)
-    * Fedora 3
-4. Robots: Darren H., Ben, Peter
-    * Robots Master, Lyber Core, Robot Controller
-    * Assembly & Common Accessioning
-    * Other Robot Suites
-5. Argo+: John M., Tommy, Darren H.?, Peter?, Ben
-    * Argo
-    * dor_indexing_app
-    * sul-mq
-    * modsulator
-    * (Fedora 3, Solr+)
 6. Preservation Core: Darren W., Ben?, Cam, John M.
     * MOAB (Gem)
     * SDR-Preservation Core
     * SDR-Services-App
     * Archive-Catalog (?)
     * SDR-PC File System written to Tape
-7. PURL+: Tommy, John M., Naomi
-    * PURL / PURL-fetcher
-    * Stacks
-    * Wowza
 7. Indexing, Access & Discovery: Jack, Jesse
     * Discovery Dispatcher
     * sw-indexer

@@ -96,14 +96,14 @@ URI                                        | POST                               
 1. GET `/namespaces`
     - **Input:** `curl https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces`
     - **Output Header:**
-    ```
-    HTTP/1.1 200 OK
-    Date: Wed, 19 Jul 2017 18:18:07 GMT
-    Content-Type: application/xml
-    ```
+      ```
+      HTTP/1.1 200 OK
+      Date: Wed, 19 Jul 2017 18:18:07 GMT
+      Content-Type: application/xml
+      ```
     - **Output Content:**
-    ```xml
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+      ```xml
+      <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
       <namespaces>
         <namespace>
           <name>testing</name>
@@ -143,114 +143,114 @@ URI                                        | POST                               
           <updated>2011-5-5.16.9. 54. 548281000</updated>
           <updatedBy>dor</updatedBy>
         </namespace>
-      </namespaces>⏎
-    ```
+      </namespaces>
+      ```
 2. GET `/namespaces/{namespace}`
   - **Input:** `curl https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid`
   - **Output response:**
-  ```
-  HTTP/1.1 200 OK
-  Date: Wed, 19 Jul 2017 18:28:48 GMT
-  Content-Type: application/xml
-  ```
+    ```
+    HTTP/1.1 200 OK
+    Date: Wed, 19 Jul 2017 18:28:48 GMT
+    Content-Type: application/xml
+    ```
   - **Output content:**
-  ```xml
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <namespace>
-    <name>druid</name>
-    <template>r:zznnnzznnnn</template>
-    <agent id="dor">
-      <permission>mint</permission>
-      <permission>delete</permission>
-      <permission>admin</permission>
-    </agent>
-    <agent id="labware">
-      <permission>mint</permission>
-    </agent>
-    <agent id="salt">
-      <permission>mint</permission>
-    </agent>
-    <agent id="xforms">
-      <permission>mint</permission>
-    </agent>
-    <agent id="hydra-etd">
-      <permission>mint</permission>
-    </agent>
-    <created>2009-8-6.13.3. 0. 606204000</created>
-    <createdBy>dor</createdBy>
-    <updated>2011-5-5.16.9. 54. 548281000</updated>
-    <updatedBy>dor</updatedBy>
-  </namespace>
-  ```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <namespace>
+      <name>druid</name>
+      <template>r:zznnnzznnnn</template>
+      <agent id="dor">
+        <permission>mint</permission>
+        <permission>delete</permission>
+        <permission>admin</permission>
+      </agent>
+      <agent id="labware">
+        <permission>mint</permission>
+      </agent>
+      <agent id="salt">
+        <permission>mint</permission>
+      </agent>
+      <agent id="xforms">
+        <permission>mint</permission>
+      </agent>
+      <agent id="hydra-etd">
+        <permission>mint</permission>
+      </agent>
+      <created>2009-8-6.13.3. 0. 606204000</created>
+      <createdBy>dor</createdBy>
+      <updated>2011-5-5.16.9. 54. 548281000</updated>
+      <updatedBy>dor</updatedBy>
+    </namespace>
+    ```
 3. GET `/namespaces/{namespace}/template`
   - **Input:** `curl https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/template`
   - **Output response:**
-  ```
-  HTTP/1.1 201 Created
-  Date: Wed, 19 Jul 2017 18:34:59 GMT
-  Location: https://sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/template/r:zznnnzznnnn
-  Content-Type: text/plain
-  ```
+    ```
+    HTTP/1.1 201 Created
+    Date: Wed, 19 Jul 2017 18:34:59 GMT
+    Location: https://sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/template/r:zznnnzznnnn
+    Content-Type: text/plain
+    ```
   - **Output content:**
-  ```
-  r:zznnnzznnnn
-  ```
+    ```
+    r:zznnnzznnnn
+    ```
 4. GET `/namespaces/{namespace}/privileges`
   - **Input:** `curl https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/privileges`
   - **Output response:**
-  ```
-  HTTP/1.1 200 OK
-  Date: Wed, 19 Jul 2017 18:37:59 GMT
-  Content-Type: application/xml
-  ```
+    ```
+    HTTP/1.1 200 OK
+    Date: Wed, 19 Jul 2017 18:37:59 GMT
+    Content-Type: application/xml
+    ```
   - **Output content:**
-  ```xml
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <agents>
-    <agent id="dor">
-      <permission>mint</permission>
-      <permission>delete</permission>
-      <permission>admin</permission>
-    </agent>
-    <agent id="labware">
-      <permission>mint</permission>
-    </agent>
-    <agent id="salt">
-      <permission>mint</permission>
-    </agent>
-    <agent id="xforms">
-      <permission>mint</permission>
-    </agent>
-    <agent id="hydra-etd">
-      <permission>mint</permission>
-    </agent>
-  </agents>
-  ```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <agents>
+      <agent id="dor">
+        <permission>mint</permission>
+        <permission>delete</permission>
+        <permission>admin</permission>
+      </agent>
+      <agent id="labware">
+        <permission>mint</permission>
+      </agent>
+      <agent id="salt">
+        <permission>mint</permission>
+      </agent>
+      <agent id="xforms">
+        <permission>mint</permission>
+      </agent>
+      <agent id="hydra-etd">
+        <permission>mint</permission>
+      </agent>
+    </agents>
+    ```
 6. GET `/namespaces/{namespace}/agent/{agent_id}`
   - **Input:** `curl https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/agent/labware`
   - **Output header:**
-  ```
-  HTTP/1.1 200 OK
-  Date: Wed, 19 Jul 2017 18:40:34 GMT
-  Content-Type: application/xml
-  ```
+    ```
+    HTTP/1.1 200 OK
+    Date: Wed, 19 Jul 2017 18:40:34 GMT
+    Content-Type: application/xml
+    ```
   - **Output content:**
-  ```xml
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <agent id="labware">
-    <permission>mint</permission>
-  </agent>
-  ```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <agent id="labware">
+      <permission>mint</permission>
+    </agent>
+    ```
 8. POST `/namespaces/{namespace}/identifiers[?quantity=n,response=xml|text]`
   - **Input:** `curl -X POST https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/identifiers`
     - **Output header:**
-    ```
-    HTTP/1.1 201 Created
-    Date: Wed, 19 Jul 2017 18:48:55 GMT
-    Location: https://sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/identifiers/bh643ng3191
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
-    ```
+      ```
+      HTTP/1.1 201 Created
+      Date: Wed, 19 Jul 2017 18:48:55 GMT
+      Location: https://sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/identifiers/bh643ng3191
+      Content-Type: text/plain
+      Transfer-Encoding: chunked
+      ```
     - **Output content:** `fv478bj4022`
   - **Input:** `curl -X POST 'https://username:password@sul-lyberservices-test.stanford.edu/suri2/namespaces/druid/identifiers?quantity=2'`
     - **Output header:**
@@ -521,7 +521,7 @@ URI                                        | POST                               
       <updated>2011-5-5.16.8. 45. 721638000</updated>
       <updatedBy>dor</updatedBy>
     </namespace>
-  </namespaces>
+    </namespaces>
     ```
 2. GET `/namespaces/{namespace}`
   - **Input:** `curl https://username:password@sul-lyberservices-dev.stanford.edu/suri2/namespaces/druid`
@@ -555,8 +555,8 @@ URI                                        | POST                               
     <createdBy>dor</createdBy>
     <updated>2011-5-5.16.8. 45. 721638000</updated>
     <updatedBy>dor</updatedBy>
-  </namespace>
-  ```
+   </namespace>
+   ```
 3. GET `/namespaces/{namespace}/template`
   - **Input:** `curl https://username:password@sul-lyberservices-dev.stanford.edu/suri2/namespaces/druid/template`
   - **Output response:**
@@ -724,5 +724,3 @@ URI                                        | POST                               
   ```
   ID already in use
   ```
-
-### SURI-Prod
