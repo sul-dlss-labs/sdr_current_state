@@ -63,7 +63,7 @@ Work through the following groupings with these questions in mind:
     * SDR-Services-App
     * Archive-Catalog (?)
     * SDR-PC File System written to Tape
-7. Access & Discovery: Jack, Jesse, geo-Darren
+7. Access & Discovery: Jack, Jessie, geo-Darren
     * Discovery Dispatcher
     * sw-indexer
     * sul-embed
