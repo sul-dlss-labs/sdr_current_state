@@ -39,12 +39,12 @@ Work through the following groupings with these questions in mind:
       * WAS Robot Suite
       * WAS Metadata Extractor
     * [Workflows Details](Robots-Workflows-Details.md)
-7. PURL+: Tommy, John M., Naomi
+7. PURL+: Tommy, Naomi, Chris B.
     * [PURL](PURL.md)
     * [PURL-fetcher](PURL-fetcher.md)
     * [Stacks](PURL-Stacks.md)
     * [Wowza](Wowza.md)
-5. Argo+: John M., Tommy, Darren H., Peter?, Ben
+5. Argo+: John M., Tommy, Peter?, Ben
     * [Argo](Argo.md)
     * [SUL MQ (Messaging)](SUL-MQ.md)
     * [Dor Indexing App](Dor-Indexing-App.md)
@@ -57,13 +57,13 @@ Work through the following groupings with these questions in mind:
     * Argo Index
     * SURI identifiers numbers
     * PURL-fetcher output
-6. Preservation Core: Darren W., Ben?, Cam, John M.
+6. Preservation Core: Darren W., Ben?, Kam, John M.
     * MOAB (Gem)
     * SDR-Preservation Core
     * SDR-Services-App
     * Archive-Catalog (?)
     * SDR-PC File System written to Tape
-7. Indexing, Access & Discovery: Jack, Jesse
+7. Access & Discovery: Jack, Jesse, geo-Darren
     * Discovery Dispatcher
     * sw-indexer
     * sul-embed
