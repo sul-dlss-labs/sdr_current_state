@@ -5,6 +5,23 @@ The SDR & DOR ecosystem groupings are largely artificial, for the sake of planni
 
 Note: this will change as needed, and we will keep this plan up to date with the current status.
 
+## SDR Ecosystem Overview Groupings
+
+![overview image](https://docs.google.com/drawings/d/1qMBtEHv2pnka2kPd5IB9m03nG24Sq4orxyQWbpJdgyI/pub?w=1440&h=1080)
+
+Working folder (has many diagrams and notes in progress): https://drive.google.com/drive/folders/0B74oOQcTdnHjSk4wSS0yWFJLRWs?usp=sharing
+
+## Proposed Outcomes of this Work
+
+1. Dataflow & data model diagrams for shared understanding.
+2. Dataflow & data model 'specs' for details useful for data processing, development, dev-ops, or operational concerns about codebases or system-wide / integration-level work.
+3. All the updated / gathered ops & dev-ops info being put into devopsdocs or another appropriate identified place.
+4. List and details of interfaces and data assessment points we want to log / monitor better.
+5. Identifying key components we can more readily move to data pipelines architecture (including ETL processing) across applications.
+6. Continuing to build out https://github.com/sul-dlss/docker-sdr based on the interfaces we’re identifying for better application development integration testing.
+7. Improved documentation generation for dataflows by development teams.
+8. Patch party and possible work cycles for cleaning up & adding better logging, monitoring, analytics & report generation for SDR, based off the findings of this work.
+
 ## Work Plan
 
 Work through the following groupings with these questions in mind:
@@ -25,7 +42,7 @@ Work through the following groupings with these questions in mind:
     * [DOR Workflow Service (Ruby interface to Java)](Dor-Workflow-Service.md)
     * [Workflow Service (Java)](Workflow-Service.md)
     * Fedora 3
-4. Robots
+4. Sept. 14 / Robots: geo-Darren
     * [Robots Master, Lyber Core, Robot Controller](Robots.md)
     * [Assembly](Robots-Assembly.md)
     * [Common Accessioning](Robots-Common-Accessioning.md)
@@ -34,46 +51,41 @@ Work through the following groupings with these questions in mind:
       * ETD Robots
       * Gis robot suite
       * Goobi Robot
-      * Dor gsb robots
       * Sdr Pres Core Robots
       * WAS Robot Suite
       * WAS Metadata Extractor
     * [Workflows Details](Robots-Workflows-Details.md)
-7. PURL+: Tommy, Naomi, Chris B.
+7. Sept. 21-28 / PURL+: Tommy, Naomi, Chris B.
     * [PURL](PURL.md)
     * [PURL-fetcher](PURL-fetcher.md)
     * [Stacks](PURL-Stacks.md)
     * [Wowza](Wowza.md)
-5. Argo+: John M., Tommy, Peter?, Ben
+5. Oct. 5-19 / Argo+: John M., Tommy, Peter, Ben
     * [Argo](Argo.md)
     * [SUL MQ (Messaging)](SUL-MQ.md)
     * [Dor Indexing App](Dor-Indexing-App.md)
     * [Dor Camel Routes](Dor-Camel-Routes.md)
     * [Modsulator](Modsulator.md)
     * [Modsulator Rails App](Modsulator-Rails-App.md)
-1. Object Current State stats: Christina, Tony
+1. Oct. 26 / Object Current State stats: Christina, Tony
     * DOR Fedora 3
     * Pres-Core filesystem
     * Argo Index
     * SURI identifiers numbers
     * PURL-fetcher output
-6. Preservation Core: Darren W., Ben?, Kam, John M.
+6. Nov. 2-16 (no meeting the 9th) / Preservation Core: Darren W., Ben, Kam, John M.
     * MOAB (Gem)
     * SDR-Preservation Core
     * SDR-Services-App
     * Archive-Catalog (?)
     * SDR-PC File System written to Tape
-7. Access & Discovery: Jack, Jesse, geo-Darren
+7. Nov. 30 - Dec. 7 / Access & Discovery: Jack, Jessie, geo-Darren
     * Discovery Dispatcher
     * sw-indexer
     * sul-embed
     * SearchWorks
     * Spotlight
-8. Wrap-up / Overview of State
-
-## SDR Ecosystem Overview Groupings
-
-![overview image](https://docs.google.com/drawings/d/1qMBtEHv2pnka2kPd5IB9m03nG24Sq4orxyQWbpJdgyI/pub?w=1440&h=1080)
+8. Dec. 14 / Wrap-up & Overview, Next Steps
 
 ## Back-lot Ideas or Questions
 
