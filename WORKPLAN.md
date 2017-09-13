@@ -66,7 +66,7 @@ Work through the following groupings with these questions in mind:
     * [Dor Indexing App](Dor-Indexing-App.md)
     * [Dor Camel Routes](Dor-Camel-Routes.md)
     * [Modsulator](Modsulator.md)
-    * [Modsulator Rails App](Modsulator-Rails-App.md)
+    * ~Modsulator Rails App~
 1. Oct. 26 / Object Current State stats: Christina, Tony
     * DOR Fedora 3
     * Pres-Core filesystem
