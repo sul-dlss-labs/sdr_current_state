@@ -30,23 +30,23 @@ Work through the following groupings with these questions in mind:
 - enumerate the interfaces and connecting processes
 
 2. ~Ingest / Entry Points~
-    * [Pre-assembly (what uses pre-assembly scripts)](Ingest-Pre-Assembly.md)
-    * [Hydrus](Ingest-Hydrus.md)
-    * [ETDs](Ingest-ETDs.md)
-    * [WAS (was-registrar)](Ingest-WAS.md)
+    * [Pre-assembly (what uses pre-assembly scripts)](apps/Ingest-Pre-Assembly.md)
+    * [Hydrus](apps/Ingest-Hydrus.md)
+    * [ETDs](apps/Ingest-ETDs.md)
+    * [WAS (was-registrar)](apps/Ingest-WAS.md)
     * Staging file systems
 3. ~DOR Services~
-    * [DOR Services (Gem)](Dor-Services-Gem.md)
-    * [DOR Services (App)](Dor-Services-App.md)
-    * [SURI](SURI.md)
-    * [DOR Workflow Service (Ruby interface to Java)](Dor-Workflow-Service.md)
-    * [Workflow Service (Java)](Workflow-Service.md)
+    * [DOR Services (Gem)](apps/Dor-Services-Gem.md)
+    * [DOR Services (App)](apps/Dor-Services-App.md)
+    * [SURI](apps/SURI.md)
+    * [DOR Workflow Service (Ruby interface to Java)](apps/Dor-Workflow-Service.md)
+    * [Workflow Service (Java)](apps/Workflow-Service.md)
     * Fedora 3
 4. Sept. 14 / Robots: geo-Darren
-    * [Robots Master, Lyber Core, Robot Controller](Robots.md)
-    * [Assembly](Robots-Assembly.md)
-    * [Common Accessioning](Robots-Common-Accessioning.md)
-    * [Other Robot Suites](Robot-Suites.md)
+    * [Robots Master, Lyber Core, Robot Controller](apps/Robots.md)
+    * [Assembly](apps/Robots-Assembly.md)
+    * [Common Accessioning](apps/Robots-Common-Accessioning.md)
+    * [Other Robot Suites](apps/Robot-Suites.md)
       * Item Release
       * ETD Robots
       * Gis robot suite
@@ -54,18 +54,18 @@ Work through the following groupings with these questions in mind:
       * Sdr Pres Core Robots
       * WAS Robot Suite
       * WAS Metadata Extractor
-    * [Workflows Details](Robots-Workflows-Details.md)
+    * [Workflows Details](apps/Robots-Workflows-Details.md)
 7. Sept. 21-28 / PURL+: Tommy, Naomi, Chris B.
-    * [PURL](PURL.md)
-    * [PURL-fetcher](PURL-fetcher.md)
-    * [Stacks](PURL-Stacks.md)
-    * [Wowza](Wowza.md)
+    * [PURL](apps/PURL.md)
+    * [PURL-fetcher](apps/PURL-fetcher.md)
+    * [Stacks](apps/PURL-Stacks.md)
+    * [Wowza](apps/Wowza.md)
 5. Oct. 5-19 / Argo+: John M., Tommy, Peter, Ben
-    * [Argo](Argo.md)
-    * [SUL MQ (Messaging)](SUL-MQ.md)
-    * [Dor Indexing App](Dor-Indexing-App.md)
-    * [Dor Camel Routes](Dor-Camel-Routes.md)
-    * [Modsulator](Modsulator.md)
+    * [Argo](apps/Argo.md)
+    * [SUL MQ (Messaging)](apps/SUL-MQ.md)
+    * [Dor Indexing App](apps/Dor-Indexing-App.md)
+    * [Dor Camel Routes](apps/Dor-Camel-Routes.md)
+    * [Modsulator](apps/Modsulator.md)
     * ~Modsulator Rails App~
 1. Oct. 26 / Object Current State stats: Christina, Tony
     * DOR Fedora 3
